@@ -1,0 +1,57 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #04080f;
+  --bg2:       #080f1c;
+  --bg3:       #0b1526;
+  --card:      #0d1a30;
+  --card2:     #101f38;
+  --border:    #162440;
+  --border2:   #1e3460;
+  --cyan:      #06b6d4;
+  --cyan-g:    rgba(6,182,212,0.1);
+  --green:     #10b981;
+  --green-g:   rgba(16,185,129,0.1);
+  --purple:    #8b5cf6;
+  --purple-g:  rgba(139,92,246,0.1);
+  --yellow:    #f59e0b;
+  --red:       #ef4444;
+  --text:      #e2e8f0;
+  --text2:     #94a3b8;
+  --text3:     #475569;
+  --mono:      'JetBrains Mono', monospace;
+  --sans:      'Space Grotesk', sans-serif;
+  --r:         12px;
+}
+
+html, body, #root {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 99px; }
+
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(16px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse {
+  0%,100% { opacity:1; }
+  50%      { opacity:0.4; }
+}
+@keyframes recording {
+  0%,100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.4); }
+  50%      { box-shadow: 0 0 0 12px rgba(239,68,68,0); }
+}
+
+.fu  { animation: fadeUp 0.4s ease both; }
+.fu1 { animation: fadeUp 0.4s 0.06s ease both; }
+.fu2 { animation: fadeUp 0.4s 0.12s ease both; }
+.fu3 { animation: fadeUp 0.4s 0.20s ease both; }
+.fu4 { animation: fadeUp 0.4s 0.30s ease both; }
